@@ -1,0 +1,290 @@
+/* == Neon Animation ================================== */
+@keyframes neonGlow {
+    0% { box-shadow: 0 0 2px #0a6ed1, 0 0 4px #0a6ed1; }
+    25% { box-shadow: 0 0 3px #0a6ed1, 0 0 6px #0a6ed1; }
+    50% { box-shadow: 0 0 4px #0a6ed1, 0 0 10px #0a6ed1; }
+    75% { box-shadow: 0 0 3px #0a6ed1, 0 0 6px #0a6ed1; }
+    100% { box-shadow: 0 0 2px #0a6ed1, 0 0 4px #0a6ed1; }
+}
+
+/* == Search Container ================================ */
+
+/* == Search Container (MODIFICADO) ================== */
+.search-container {
+    width: 100%;
+    max-width: 95%;  /* Valor inicial más flexible */
+    margin: 1rem auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Ajustes para pantallas medianas y grandes */
+@media screen and (min-width: 768px) {
+    .search-container {
+        max-width: 85%;  /* Más ancho en tablets */
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .search-container {
+        max-width: 75%;  /* Más ancho en desktops */
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .search-container {
+        max-width: 65%;  /* Ancho óptimo para pantallas grandes */
+    }
+}
+
+/* Eliminar los media queries conflictivos */
+/* (Quitar los existentes con min-width: 700 sin unidad y min-width: 2000px) */
+ 
+
+.custom-searchfield {
+    width: 100%;
+    max-width: 100%; /* usar ancho total del contenedor */
+}
+ 
+
+.custom-searchfield .sapMSFF {
+    width: 100%;
+    border-radius: 25px;
+    height: 3.5rem;
+    border: 2px solid #0854a0;
+    transition: all 0.3s ease-in-out;
+    animation: neonGlow 2s ease-in-out infinite;
+    background: rgba(255, 255, 255, 0.95);
+    box-sizing: border-box;
+}
+
+/* Input field - MÁS ESPACIO PARA TEXTO */
+.custom-searchfield .sapMSFI {
+    padding: 0 0.5rem 0 1rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+}
+
+/* Botón de búsqueda - MÁS COMPACTO */
+.custom-searchfield .sapMSFB {
+    width: 2rem  ;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    border-radius: 0 25px 25px 0;
+    padding: 0;
+}
+
+/* Icono de reset - MÁS COMPACTO */
+.custom-searchfield .sapMSFR {
+    right: 1rem !important; /* Ajustado al nuevo ancho del botón */
+    width: 1rem;
+    height: 3.5rem;
+}
+
+/* Suggestion area - AJUSTADA */
+.custom-searchfield .sapMSFS {
+    right: 0;
+    width: 5rem !important; /* Ajustado al nuevo ancho del botón */
+    height: 3.5rem;
+    line-height: 3.5rem;
+}
+
+.custom-searchfield input::placeholder {
+    font-size: 0.9rem;
+    align-content: center;
+    align-items: center;
+    alignment-baseline: middle;
+    text-align: start;
+    text-decoration: overline;
+    color: #666;
+}
+
+/* == Hover and Focus States ========================== */
+.custom-searchfield .sapMSFF:hover {
+    border-color: #427cac;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(8, 84, 160, 0.15);
+}
+
+.custom-searchfield .sapMSFF:focus-within {
+    border-color: #0854a0;
+    animation: neonGlow 1s ease-in-out infinite;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(8, 84, 160, 0.2);
+    transform: translateY(-1px);
+}
+
+/* == Responsive Design (SIMPLIFICADO) =============== */
+
+/* Tablets y Desktop */
+@media screen and (min-width: 2000px) {
+    .custom-searchfield {
+        width: 100%;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 1767px) {
+    .custom-searchfield {
+        width: 95%;
+        min-width: 280px;
+    }
+    
+    .custom-searchfield .sapMSFF {
+        height: 3rem;
+    }
+    
+    .custom-searchfield .sapMSFI {
+        padding: 0 4.5rem 0 1rem !important;
+        height: 3rem;
+        line-height: 3rem;
+        font-size: 1rem;
+    }
+    
+    .custom-searchfield .sapMSFB {
+        width: 4rem !important;
+        height: 3rem;
+        line-height: 3rem;
+    }
+    
+    .custom-searchfield .sapMSFR {
+        right: 4rem !important;
+        width: 1.5rem;
+        height: 3rem;
+    }
+    
+    .custom-searchfield .sapMSFS {
+        width: 4rem !important;
+        height: 3rem;
+        line-height: 3rem;
+    }
+    
+    .search-container {
+        margin: 1rem auto;
+        padding: 0 0.5rem;
+    }
+}
+
+/* == Score Styling =================================== */
+.score-number.big-score {
+    font-size: 2rem !important;
+    font-weight: bold !important;
+    color: #0854a0 !important;
+    text-align: right !important;
+    width: 100%;
+    display: block;
+}
+
+.scoreGreen  { color: #107e3e; }
+.scoreOrange { color: #e9730c; }
+.scoreRed    { color: #bb0000; }
+
+/* == Full Width App ================================== */
+.fullWidthApp {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+ 
+}
+
+.item-row {
+    padding: 1rem;
+    border: 1px solid #d0e5f5;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #fafdff 0%, #f2f9fc 100%);
+    margin: 0.75rem 0;
+    box-shadow: 0 2px 6px rgba(0, 32, 60, 0.05);
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.item-row:hover {
+    box-shadow: 0 4px 10px rgba(0, 32, 60, 0.15);
+    border-color: #007cc0;
+    background: linear-gradient(180deg, #eaf6fd 0%, #dff1fb 100%);
+    transform: translateY(-1px);
+}
+
+.item-row:active {
+    box-shadow: 0 2px 5px rgba(0, 32, 60, 0.2) inset;
+    background: #d0e9f7;
+}
+
+/* Opcional: animación suave al cargar */
+@keyframes fadeInItem {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.item-row {
+    animation: fadeInItem 1s ease-in;
+}
+
+
+.column-id,
+.column-metadata,
+.column-score {
+    padding: 0 1rem !important;
+}
+
+.column-metadata .sapMTableCell,
+.column-metadata .sapMText,
+.column-metadata .sapMFormattedText {
+    padding-top: 0.3rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+.sapMListTblCell {
+    padding-top: 0.4rem !important;
+    padding-bottom: 0.4rem !important;
+}
+
+/* == Selected Item Styling =========================== */
+.selectedItem {
+    background-color: #ebf5fe !important;
+    border-left: 4px solid #0854a0 !important;
+}
+
+.selectedItem .sapFCard {
+    box-shadow: 0 0 0 1px #0854a0 !important;
+}
+
+
+.car-list {
+    border: 1px solid #d0e5f5;
+    border-radius: 12px;
+    padding: 0.5rem;
+    background-color: #f9fbfc;
+    box-shadow: 0 2px 8px rgba(0, 32, 60, 0.05);
+    transition: all 0.3s ease-in-out;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Hover del listado completo */
+.car-list:hover {
+    box-shadow: 0 4px 12px rgba(0, 32, 60, 0.1);
+    border-color: #b0d7ef;
+}
+
+/* Si quieres animación de entrada al mostrar el listado */
+@keyframes fadeInList {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.car-list {
+    animation: fadeInList 3s ease-in;
+}
+
+ 

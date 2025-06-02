@@ -1,0 +1,48 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:u="sap.ui.unified"
+    xmlns:core="sap.ui.core">
+    <Dialog
+        title="Subir Excel"
+        class="sapUiResponsiveMargin">
+        <content>
+            <VBox class="sapUiSmallMargin">
+                <Label 
+                    text="Index Name"
+                    required="true"
+                    class="sapUiTinyMarginBottom"/>
+                <Input
+                    id="indexInput"
+                    placeholder="Introduce el nombre del índice"
+                    class="sapUiSmallMarginBottom"/>
+                
+                <u:FileUploader
+                    id="fileUploader"
+                    name="myFileUpload"
+                    uploadUrl="upload/"
+                    tooltip="Subir archivo Excel"
+                    placeholder="Selecciona un archivo Excel"
+                    fileType="xlsx"
+                    class="sapUiSmallMarginBottom">
+                    <u:parameters>
+                        <u:FileUploaderParameter
+                            name="accept"
+                            value=".xlsx"/>
+                    </u:parameters>
+                </u:FileUploader>
+            </VBox>
+        </content>
+        <beginButton>
+            <Button
+                text="Subir"
+                press=".onUploadExcel"
+                type="Emphasized"/>
+        </beginButton>
+        <endButton>
+            <Button
+                text="Cancelar"
+                press=".onCloseExcelDialog"
+                type="Transparent"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,39 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog
+        id="configDialog"
+        title="Seleccionar Configuración"
+        class="sapUiResponsiveMargin">
+        <content>
+            <VBox class="sapUiSmallMargin">
+                <Select
+                    id="configSelect"
+                    selectedKey="{config>/selectedId}"
+                    change=".onConfigChange"
+                    items="{
+                        path: '/configSet',
+                        parameters: {
+                            countMode: 'None'
+                        }
+                    }"
+                    class="sapUiTinyMarginBottom">
+                    <core:Item key="{ID}" 
+                             text="ID: {ID}"/>
+                </Select>
+            </VBox>
+        </content>
+        <beginButton>
+            <Button
+                text="Guardar"
+                press=".onSaveConfig"
+                type="Emphasized"/>
+        </beginButton>
+        <endButton>
+            <Button
+                text="Cancelar"
+                press=".onCloseConfig"
+                type="Transparent"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

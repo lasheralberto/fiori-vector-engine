@@ -1,0 +1,12 @@
+<mvc:View controllerName="vectorengines4h.controller.App"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" 
+    displayBlock="true"
+    width="100%"
+    xmlns="sap.m">
+  
+    <Shell id="shell" appWidthLimited="false">
+        <App id="app"  />
+    </Shell>
+ 
+</mvc:View>
