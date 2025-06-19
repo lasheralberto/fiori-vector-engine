@@ -7,7 +7,7 @@
 |**Generation Platform**<br>Visual Studio Code|
 |**Template Used**<br>Basic V2|
 |**Service Type**<br>SAP System (ABAP On Premise)|
-|**Service URL**<br>http://cuvawss4h01.linkeit.local:50000/sap/opu/odata/sap/ZODATA_PR_VECTORENGINE_CARS_SRV|
+|**Service URL**<br> /sap/opu/odata/sap/ZODATA_PR_VECTORENGINE_CARS_SRV|
 |**Module Name**<br>vectorengine-s4h|
 |**Application Title**<br>Vector Engine Retriever Application|
 |**Namespace**<br>|
