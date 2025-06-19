@@ -17,7 +17,7 @@ server:
           url: https://ui5.sap.com
         backend:
           - path: /sap
-            url: http://cuvawss4h01.linkeit.local:50000
+            url: YOUR_SYSTEM_URL
             client: '100'
     - name: fiori-tools-appreload
       afterMiddleware: compression
