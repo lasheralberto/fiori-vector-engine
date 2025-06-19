@@ -14,7 +14,7 @@ builder:
       afterTask: generateCachebusterInfo
       configuration:
         target:
-          url: http://CUVAWSS4H01.linkeit.local:50000/
+          url: YOUR_SYSTEM_URL
           client: '100'
         app:
           name: ZVECTORBSP
